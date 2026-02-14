@@ -69,11 +69,6 @@ actualizarContador();
 
 const musica = document.getElementById("musicaPrincipal");
 
-function iniciarMusica() {
-    musica.volume = 0.6;
-    musica.play();
-    document.removeEventListener("click", iniciarMusica);
-}
-
-// Se activa con el primer clic en cualquier parte
-document.addEventListener("click", iniciarMusica);
+window.addEventListener("load", () => {
+    musica.muted = false;
+});
